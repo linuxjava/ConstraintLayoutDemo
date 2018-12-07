@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!--测试Weighted Chain使用
+    此情况可以不设置layout_constraintHorizontal_chainStyle
+    -->
+    <Button
+        android:id="@+id/btn_a"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="A"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/btn_b"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.2" />
+
+    <Button
+        android:id="@+id/btn_b"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="B"
+        app:layout_constraintLeft_toRightOf="@+id/btn_a"
+        app:layout_constraintRight_toLeftOf="@+id/btn_c"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.3" />
+
+    <Button
+        android:id="@+id/btn_c"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="C"
+        app:layout_constraintLeft_toRightOf="@+id/btn_b"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <!--测试spread使用,元素之间的间隙均匀分布-->
+    <Button
+        android:id="@+id/btn_a1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="A1"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/btn_b1"
+        app:layout_constraintTop_toBottomOf="@+id/btn_a" />
+
+    <Button
+        android:id="@+id/btn_b1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="B1"
+        app:layout_constraintLeft_toRightOf="@+id/btn_a1"
+        app:layout_constraintRight_toLeftOf="@+id/btn_c1"
+        app:layout_constraintTop_toTopOf="@+id/btn_a1" />
+
+    <Button
+        android:id="@+id/btn_c1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="C1"
+        app:layout_constraintLeft_toRightOf="@+id/btn_b1"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btn_a1" />
+
+    <!--测试spread_inside使用,元素之间的间隙均匀分布,但是最左边和右边没有间隙-->
+    <Button
+        android:id="@+id/btn_a2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="A2"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/btn_b2"
+        app:layout_constraintTop_toBottomOf="@+id/btn_a1" />
+
+    <Button
+        android:id="@+id/btn_b2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="B2"
+        app:layout_constraintLeft_toRightOf="@+id/btn_a2"
+        app:layout_constraintRight_toLeftOf="@+id/btn_c2"
+        app:layout_constraintTop_toTopOf="@+id/btn_a2" />
+
+    <Button
+        android:id="@+id/btn_c2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="C2"
+        app:layout_constraintLeft_toRightOf="@+id/btn_b2"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btn_a2" />
+
+    <!--测试packed使用-->
+    <Button
+        android:id="@+id/btn_a3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="A3"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/btn_b3"
+        app:layout_constraintTop_toBottomOf="@+id/btn_a2" />
+
+    <Button
+        android:id="@+id/btn_b3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="B3"
+        app:layout_constraintLeft_toRightOf="@+id/btn_a3"
+        app:layout_constraintRight_toLeftOf="@+id/btn_c3"
+        app:layout_constraintTop_toTopOf="@+id/btn_a3" />
+
+    <Button
+        android:id="@+id/btn_c3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="C3"
+        app:layout_constraintLeft_toRightOf="@+id/btn_b3"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btn_a3" />
+
+    <!--测试packed和layout_constraintHorizontal_bias联合使用-->
+    <Button
+        android:id="@+id/btn_a4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="A4"
+        app:layout_constraintHorizontal_bias="0.2"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/btn_b4"
+        app:layout_constraintTop_toBottomOf="@+id/btn_a3" />
+
+    <Button
+        android:id="@+id/btn_b4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="B3"
+        app:layout_constraintLeft_toRightOf="@+id/btn_a4"
+        app:layout_constraintRight_toLeftOf="@+id/btn_c4"
+        app:layout_constraintTop_toTopOf="@+id/btn_a4" />
+
+    <Button
+        android:id="@+id/btn_c4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="C4"
+        app:layout_constraintLeft_toRightOf="@+id/btn_b4"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btn_a4" />
+</android.support.constraint.ConstraintLayout>

@@ -15,14 +15,77 @@
         android:text="chainStyle"
         android:textAllCaps="false" />
 
+
+    <Button
+        android:id="@+id/btn_DimensionRatio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_chainStyle"
+        android:text="DimensionRatio"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/btn_Guideline"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_DimensionRatio"
+        android:text="Guideline"
+        android:textAllCaps="false" />
+
     <Button
         android:id="@+id/btn_GoneMargin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_chainStyle"
+        app:layout_constraintTop_toBottomOf="@+id/btn_Guideline"
         android:text="goneMargin"
         android:textAllCaps="false" />
 
+    <Button
+        android:id="@+id/btn_Barrier"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_GoneMargin"
+        android:text="Barrier"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/btn_Visibility"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_Barrier"
+        android:text="Visibility"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/btn_circular_positioning"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_Visibility"
+        android:text="Circular Positioning"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/btn_constrained_width_height"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_circular_positioning"
+        android:text="layout_constrainedWidth和layout_constrainedHeight"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/btn_other"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_constrained_width_height"
+        android:text="其它"
+        android:textAllCaps="false" />
 
 </android.support.constraint.ConstraintLayout>
